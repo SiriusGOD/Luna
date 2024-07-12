@@ -35,8 +35,20 @@
     <p class="rcm-star js-rcmStar" keep-girlid="15361" data-selectgirlname="Kelly" data-selectposition="ピックアップセラピスト" onmousedown="dataLayer.push({'event':'add_to_keep','button_type_id':'1'});console.log(222);">
         <button class="google-tag-manager">Kelly</button>
     </p>
+
+    <p class="rcm-star js-rcmStar" keep-girlid="15360" data-selectgirlname="ハナ(40代)" data-selectposition="ピックアップセラピスト">
+        <button class="google-tag-manager2">ハナ(40代) 2</button>
+    </p>
+    <p class="rcm-star js-rcmStar" keep-girlid="15361" data-selectgirlname="Kelly" data-selectposition="ピックアップセラピスト">
+        <button class="google-tag-manager2">Kelly 2</button>
+    </p>
 </body>
 <script>
+    addEventListener('click', function(e) {
+        if (e.target && e.target.classList.contains('google-tag-manager2')) {
+            push_datalayer();
+        }
+    });
     function push_datalayer() {
         dataLayer.push({'event':'add_to_keep','button_type_id':'1'});
     }
